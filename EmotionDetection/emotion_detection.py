@@ -39,6 +39,7 @@ def emotion_detector(text_to_analyze):
                 if res_emotion_val > max_val[1]:
                     max_val = (key, res_emotion_val)
     
+    # get method will have the values fall back to None if they arent found ie an unsuccessful response
     res = {}
     for key in keys:
         res[key] = emotions.get(key)
